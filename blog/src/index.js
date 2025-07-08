@@ -8,6 +8,11 @@ const port = 3000;
 // lấy img trong public
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(express.urlencoded({
+    extended: true
+})); // support POST Form
+app.use(express.json()); // support JSON : ajax, fetch, axios, XMLHttpRequest
+
 // HTTP logger
 app.use(morgan('combined'));
 
