@@ -1,24 +1,30 @@
+const { mutipleMongooseToObject, mongooseToObject } = require('../../util/mongoose');
 const Course = require('../models/Course');
 
 class SiteController {
     // [GET] / site
-    async index(req, res) {
+    index(req, res, next) {
 
-        // render json
-        try {
-            const courses = await Course.find({});
-            res.json(courses);
-        } catch (error) {
-            res.status(400).json({ error: 'ERROR!!!' });
-        }
-
-        // render view 
-        // res.render('home');
+        // render view -> res.render('home', { courses }) 
+        // render json -> res.json(courses)
+        Course.find({})
+            .then(courses => {
+                res.render('home', {
+                    courses: mutipleMongooseToObject(courses)
+                });
+            })
+            .catch(next)
     }
 
     // [GET] / site/:slug
-    show(req, res) {
-        res.send('News detail');
+    show(req, res, next) {
+        Course.findOne({ id: 1 })
+            .then(course => {
+                res.render('show', {
+                    course: mongooseToObject(course)
+                });
+            })
+            .catch(next)
     }
 }
 
