@@ -4,13 +4,16 @@ const Course = require('../models/Course');
 class SiteController {
     // [GET] / site
     index(req, res, next) {
+        
+        const search = req.query.search ? String(req.query.search) : '';
 
         // render view -> res.render('home', { courses }) 
         // render json -> res.json(courses)
-        Course.find({})
+        Course.find({ name: { $regex: search, $options: 'i' } })
             .then(courses => {
                 res.render('home', {
-                    courses: mutipleMongooseToObject(courses)
+                    courses: mutipleMongooseToObject(courses),
+                    search: search
                 });
             })
             .catch(next)

@@ -1,12 +1,16 @@
 <div class="row mb-2 mt-4">
     {{#each courses}}
-    <div class="col-sm-6 col-md-4 mb-4">
+    <div class="col-sm-6 col-md-3 mb-4">
         <div class="card">
-            <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">{{this.name}}</h5>
-                <p class="card-text">{{this.description}}</p>
-                <a href="#" class="btn btn-primary">Add to cart</a>
+            <a href="/course/{{this.slug}}">
+                <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
+            </a>
+            <div class="card-body" style="min-height: 200px;">
+                <h5 class="card-title text-truncate">
+                    <a href="/course/{{this.slug}}">{{this.name}}</a>
+                </h5>
+                <p class="card-text text-truncate">{{this.description}}</p>
+                <a href="#" class="btn btn-primary mt-5">Add to cart</a>
             </div>
         </div>
     </div>
