@@ -25,7 +25,7 @@ app.use(morgan('combined'));
 // template engine
 app.engine('.hbs', engine({ extname: '.hbs' }));
 app.set('view engine', '.hbs');
-app.set('views', path.join(__dirname, 'resources/views'));
+app.set('views', path.join(__dirname, 'resources', 'views'));
 
 // Routes init
 route(app);
@@ -33,5 +33,5 @@ route(app);
 // start project [node index.js]
 // start project with nodemon [npm start]
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`App listening on port ${port}`)
 })
