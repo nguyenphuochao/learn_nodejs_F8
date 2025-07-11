@@ -4,5 +4,9 @@ module.exports = {
     },
     mongooseToObject: function (mongoose) {
         return mongoose ? mongoose.toObject() : mongoose;
+    },
+    localeDateString: function (date) {
+        var date = new Date(date);
+        return date.toLocaleDateString();
     }
 }

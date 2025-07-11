@@ -12,10 +12,10 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/courses/create">Đăng khóa học</span></a>
-                </li>
-                {{!-- Search form --}}
+            </ul>
+
+            <ul class="navbar-nav">
+                {{!-- Search Form --}}
                 <li class="nav-item">
                     <form class="form-inline my-2 my-lg-0">
                         <input name="search" value="{{search}}" class="form-control mr-sm-2" type="search"
@@ -23,20 +23,19 @@
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </li>
-            </ul>
 
-            {{!-- Dropdown --}}
-            <ul class="navbar-nav">
+                {{!-- Dropdown --}}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
+                        Xin chào: <span class="fw-bold username">HaoNP</span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="/courses/create">Đăng kí khóa học</a>
+                        <a class="dropdown-item" href="/me/stored/courses">Khóa học của tôi</a>
+                        <a class="dropdown-item" href="me/stored/news">Bài viết của tôi</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Đăng xuất</a>
                     </div>
                 </li>
             </ul>

@@ -23,7 +23,7 @@ app.use(express.json()); // support JSON : ajax, fetch, axios, XMLHttpRequest
 app.use(morgan('combined'));
 
 // template engine
-app.engine('.hbs', engine({ extname: '.hbs' }));
+app.engine('.hbs', engine({ extname: '.hbs', helpers: { sum: (a, b) => a + b } }));
 app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'resources', 'views'));
 
