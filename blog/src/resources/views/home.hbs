@@ -2,12 +2,12 @@
     {{#each courses}}
     <div class="col-sm-6 col-md-3 mb-4">
         <div class="card">
-            <a href="/course/{{this.slug}}">
+            <a href="/courses/{{this.slug}}">
                 <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
             </a>
             <div class="card-body" style="min-height: 200px;">
                 <h5 class="card-title text-truncate">
-                    <a href="/course/{{this.slug}}">{{this.name}}</a>
+                    <a href="/courses/{{this.slug}}">{{this.name}}</a>
                 </h5>
                 <p class="card-text text-truncate">{{this.description}}</p>
                 <a href="#" class="btn btn-primary mt-5">Add to cart</a>
