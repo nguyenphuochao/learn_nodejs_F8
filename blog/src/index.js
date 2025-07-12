@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+const methodOverride = require('method-override');
 const { engine } = require('express-handlebars');
 const morgan = require('morgan');
 const app = express();
@@ -18,6 +19,9 @@ app.use(express.urlencoded({
     extended: true
 })); // support POST Form
 app.use(express.json()); // support JSON : ajax, fetch, axios, XMLHttpRequest
+
+// HTTP method override
+app.use(methodOverride('_method'));
 
 // HTTP logger
 app.use(morgan('combined'));

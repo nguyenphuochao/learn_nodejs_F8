@@ -1,0 +1,51 @@
+[{
+  "_id": {
+    "$oid": "6871e092cc87f6b012e41eaa"
+  },
+  "name": "Khóa học Python",
+  "description": "Học Python tại F8",
+  "image": "https://khokhoahoc.org/wp-content/uploads/2025/06/Khoa-Hoc-1-247x124.png",
+  "level": "Cơ bản",
+  "createdAt": {
+    "$date": "2025-07-12T04:12:02.111Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-12T04:12:02.111Z"
+  },
+  "slug": "khoa-hoc-python",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6871e127cc87f6b012e41ec2"
+  },
+  "name": "Khóa học SQL phân tích dữ liệu",
+  "description": "Khóa học phân tích dữ liệu tại F8",
+  "image": "https://khokhoahoc.org/wp-content/uploads/2025/06/Thiet-ke-chua-co-ten-1-247x124.png",
+  "level": "nâng cao",
+  "createdAt": {
+    "$date": "2025-07-12T04:14:31.053Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-12T04:14:31.053Z"
+  },
+  "slug": "khoa-hoc-sql-phan-tich-du-lieu",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6871e162cc87f6b012e41ece"
+  },
+  "name": "Khóa học Java spring boot",
+  "description": "Khóa học Java spring boot tại F8",
+  "image": "https://khokhoahoc.org/wp-content/uploads/2025/02/Thiet-ke-chua-co-ten-247x124.png",
+  "level": "Cơ bản",
+  "createdAt": {
+    "$date": "2025-07-12T04:15:30.102Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-12T04:15:30.102Z"
+  },
+  "slug": "khoa-hoc-java-spring-boot",
+  "__v": 0
+}]
