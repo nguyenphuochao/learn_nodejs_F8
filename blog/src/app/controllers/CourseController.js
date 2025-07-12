@@ -31,7 +31,7 @@ class CourseController {
             });
     }
 
-    // [GET] / course/:id/edit
+    // [GET] / courses/:id/edit
     edit(req, res, next) {
         Course.findById(req.params.id)
             .then(course => res.render('courses/edit', {
@@ -40,15 +40,32 @@ class CourseController {
             .catch(next);
     }
 
-    // [PUT] / course/:id
+    // [PUT] / courses/:id
     update(req, res, next) {
         Course.updateOne({ _id: req.params.id }, req.body)
             .then(() => res.redirect('/me/stored/courses'))
             .catch(next);
     }
 
-    // [DELETE] / course/:id
+    // [DELETE] / courses/:id
     destroy(req, res, next) {
+        // Dùng delete để xóa mềm (delete soft)
+        Course.delete({ _id: req.params.id })
+            .then(() => res.redirect('back'))
+            .catch(next);
+    }
+
+    // [PATCH] / courses/:id/restore
+    restore(req, res, next) {
+        // Dùng restore để khôi phục bản ghi
+        Course.restore({ _id: req.params.id })
+            .then(() => res.redirect('back'))
+            .catch(next);
+    }
+
+    // [DELETE] / courses/:id/force
+    forceDestroy(req, res, next) {
+        // Dùng forceDelete để xóa vĩnh viễn (delete hard)
         Course.deleteOne({ _id: req.params.id })
             .then(() => res.redirect('back'))
             .catch(next);
