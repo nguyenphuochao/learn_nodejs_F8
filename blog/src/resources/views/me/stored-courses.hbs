@@ -1,4 +1,4 @@
-<div class="mt-4">
+<form class="mt-4" name="container-form" action="/courses/handle-form-actions" method="POST">
     <h3>Danh sách khóa học</h3>
 
     <a href="/me/trash/courses">Thùng rác ({{deletedCount}})</a>
@@ -13,8 +13,8 @@
         </div>
 
         <div class="form-group ml-2 mr-2">
-            <select id="inputState" class="form-control form-control-sm">
-                <option>-- Hành động --</option>
+            <select id="inputState" class="form-control form-control-sm" name="action" required="required">
+                <option value="">-- Hành động --</option>
                 <option value="delete">Xóa</option>
             </select>
         </div>
@@ -24,7 +24,7 @@
         </div>
     </div>
 
-    {{!-- List table counses --}}
+    {{!-- List table courses --}}
     <table class="table mt-4">
         <thead>
             <tr>
@@ -62,7 +62,7 @@
             {{/each}}
         </tbody>
     </table>
-</div>
+</form>
 
 {{!-- Confirm delete course --}}
 
@@ -95,6 +95,7 @@
     document.addEventListener('DOMContentLoaded', function () {
         var courseId;
         var deleteForm = document.forms['delete-course-form'];
+        var containerForm = document.forms['container-form'];
         var btnDeleteCourse = document.getElementById('btn-delete-course');
         var checkboxAll = $("#checkbox-all");
         var courseItemCheckbox = $('input[name="courseIds[]"]');
@@ -124,6 +125,17 @@
             var isCheckedAll = courseItemCheckbox.length === $('input[name="courseIds[]"]:checked').length;
             checkboxAll.prop('checked', isCheckedAll);
             renderCheckAllSubmitBtn();
+        })
+
+        // Submit container-form when checked course
+        checkAllSubmitBtn.click(function (e) {
+            var isSubmittable = $(this).hasClass('disabled');
+            if (isSubmittable) {
+                e.preventDefault();
+                return;
+            }
+
+            containerForm.submit();
         })
 
         // Re-render check all submit button
