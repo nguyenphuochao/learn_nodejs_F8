@@ -13,14 +13,14 @@
         </div>
 
         <div class="form-group ml-2 mr-2">
-            <select id="inputState" class="form-control form-control-sm" name="action" required="required">
+            <select id="inputState" class="form-control form-control-sm" name="action" required>
                 <option value="">-- Hành động --</option>
                 <option value="delete">Xóa</option>
             </select>
         </div>
 
         <div class="form-group">
-            <button type="button" class="btn btn-primary btn-sm check-all-submit-btn disabled">Thực hiện</button>
+            <button type="submit" class="btn btn-primary btn-sm check-all-submit-btn" disabled>Thực hiện</button>
         </div>
     </div>
 
@@ -28,7 +28,7 @@
     <table class="table mt-4">
         <thead>
             <tr>
-                <th colspan="2"></th>
+                <th></th>
                 <th>#</th>
                 <th>Tên khóa học</th>
                 <th>Level</th>
@@ -127,24 +127,13 @@
             renderCheckAllSubmitBtn();
         })
 
-        // Submit container-form when checked course
-        checkAllSubmitBtn.click(function (e) {
-            var isSubmittable = $(this).hasClass('disabled');
-            if (isSubmittable) {
-                e.preventDefault();
-                return;
-            }
-
-            containerForm.submit();
-        })
-
         // Re-render check all submit button
         function renderCheckAllSubmitBtn() {
             var checkedCount = $('input[name="courseIds[]"]:checked').length;
             if (checkedCount > 0) {
-                checkAllSubmitBtn.removeClass('disabled');
+                checkAllSubmitBtn.attr('disabled', false);
             } else {
-                checkAllSubmitBtn.addClass('disabled');
+                checkAllSubmitBtn.attr('disabled', true);
             }
         }
 
