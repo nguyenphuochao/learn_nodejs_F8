@@ -2,15 +2,15 @@
   "_id": {
     "$oid": "6871e092cc87f6b012e41eaa"
   },
-  "name": "Khóa học Python",
-  "description": "Học Python tại F8",
+  "name": "Khóa học Python New",
+  "description": "# Học Python tại F8\r\nXin chào",
   "image": "https://khokhoahoc.org/wp-content/uploads/2025/06/Khoa-Hoc-1-247x124.png",
-  "level": "Cơ bản",
+  "level": "Cơ bản ",
   "createdAt": {
     "$date": "2025-07-12T04:12:02.111Z"
   },
   "updatedAt": {
-    "$date": "2025-07-12T04:12:02.111Z"
+    "$date": "2025-07-15T12:17:42.817Z"
   },
   "slug": "khoa-hoc-python",
   "__v": 0
@@ -27,7 +27,7 @@
     "$date": "2025-07-12T04:14:31.053Z"
   },
   "updatedAt": {
-    "$date": "2025-07-12T04:14:31.053Z"
+    "$date": "2025-07-13T08:07:37.701Z"
   },
   "slug": "khoa-hoc-sql-phan-tich-du-lieu",
   "__v": 0
@@ -44,8 +44,98 @@
     "$date": "2025-07-12T04:15:30.102Z"
   },
   "updatedAt": {
-    "$date": "2025-07-12T04:15:30.102Z"
+    "$date": "2025-07-13T08:07:23.145Z"
   },
   "slug": "khoa-hoc-java-spring-boot",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "687646d9d58e31956b3b3169"
+  },
+  "name": "Lập trình Angular + ASP .NET",
+  "description": "Học ậlp trình Angular + ASP .NET tại F8",
+  "image": "https://khokhoahoc.org/wp-content/uploads/2024/09/Share-Khoa-Hoc-Xay-Dung-Ung-Dung-CMS-Voi-ASPNET-Core-80-Angular-247x124.png.webp",
+  "level": "nâng cao",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-07-15T12:17:29.244Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-15T12:17:29.244Z"
+  },
+  "slug": "lap-trinh-angular-asp-net",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6876470cd58e31956b3b317f"
+  },
+  "name": "Khóa học ReactJs Pro",
+  "description": "Học ReactJs Pro tại F8",
+  "image": "https://khokhoahoc.org/wp-content/uploads/2024/11/Dinh-Cao-247x124.png.webp",
+  "level": "Nâng cao",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-07-15T12:18:20.800Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-15T12:18:20.800Z"
+  },
+  "slug": "khoa-hoc-reactjs-pro",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68764739d58e31956b3b3184"
+  },
+  "name": "Khóa học Lập trình PHP core",
+  "description": "Khóa học Lập trình PHP core tại F8",
+  "image": "https://khokhoahoc.org/wp-content/uploads/2023/10/Share-Khoa-Hoc-Lap-Trinh-Web-Voi-PHP-Cho-Nguoi-Moi-Bat-Dau-247x124.png.webp",
+  "level": "Cơ bản",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-07-15T12:19:05.812Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-15T12:19:05.812Z"
+  },
+  "slug": "khoa-hoc-lap-trinh-php-core",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6876475bd58e31956b3b3189"
+  },
+  "name": "Học lập trình Fluiter",
+  "description": "Học lập trình Fluiter tại F8",
+  "image": "https://khokhoahoc.org/wp-content/uploads/2024/09/Share-Khoa-Hoc-Lap-Trinh-Flutter-Tu-A-Z-2024-Cung-Trung-Tam-CodeFresher-247x124.png.webp",
+  "level": "nâng cao",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-07-15T12:19:39.668Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-15T12:19:39.668Z"
+  },
+  "slug": "hoc-lap-trinh-fluiter",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68764779d58e31956b3b3190"
+  },
+  "name": "Khóa học Bootstrap Framework",
+  "description": "Khóa học Bootstrap Framework tại F8",
+  "image": "https://khokhoahoc.org/wp-content/uploads/2022/03/lap-trinh-wordpress-510x254.png.webp",
+  "level": "Nâng cao",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-07-15T12:20:09.574Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-15T12:20:09.574Z"
+  },
+  "slug": "khoa-hoc-bootstrap-framework",
   "__v": 0
 }]
