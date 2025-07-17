@@ -30,9 +30,9 @@
             <tr>
                 <th></th>
                 <th>#</th>
-                <th>Tên khóa học <a href="?_sort&column=name&type=desc"><i class="bi bi-arrow-down-up"></i></a></th>
-                <th>Level</th>
-                <th colspan="2">Thời gian tạo</th>
+                <th>Tên khóa học {{{ sortable 'name' _sort }}}</th>
+                <th>Level {{{ sortable 'level' _sort }}}</th>
+                <th colspan="2">Thời gian tạo {{{ sortable 'createdAt' _sort }}}</th>
             </tr>
         </thead>
         <tbody>
@@ -136,8 +136,6 @@
                 checkAllSubmitBtn.attr('disabled', true);
             }
         }
-
-
     })
 
 </script>
